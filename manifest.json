@@ -8,8 +8,13 @@
     "homepage_url": "https://github.com/nyu-ossd-s19/tickStop",
   
     "permissions": [
-      "activeTab"
-    ]
+      "activeTab",
+      "webRequest",
+      "<all_urls>"
+    ],
   
+  	"background": {
+  		"scripts": ["background.js"]
+  	}
   }
   
