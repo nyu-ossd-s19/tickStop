@@ -1,8 +1,14 @@
-function logURL(requestDetails) {
-  console.log("Loading: " + requestDetails.url);
+var DELAY = 20;
+function startTimer(requestDetails) {
+  browser.alarms.create("", {delayInMinutes: DELAY});
+  console.log("Start timer for: " + requestDetails.url);
 }
 
 browser.webRequest.onBeforeRequest.addListener(
-  logURL,
+  startTimer,
   {urls: ["*://www.facebook.com/*"]}
 );
+
+browser.alarms.onAlarm.addListener((alarm) => {
+  console.log("End timer");
+});
