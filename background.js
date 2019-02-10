@@ -1,6 +1,7 @@
 var DELAY = 20;
 var PERIOD = 5;
 var URL = "";
+var MATCH_URL = "www.facebook.com";
 
 function startTimer(requestDetails) {
     URL = requestDetails.url;
@@ -8,10 +9,12 @@ function startTimer(requestDetails) {
     console.log("Start timer for: " + URL);
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-    startTimer,
-    {urls: ["*://www.facebook.com/*"]}
-);
+browser.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
+  console.log("TAB URL: " + tab.url);
+  if(tab.url.includes(MATCH_URL)){
+    startTimer(tab);
+  }
+});
 
 browser.alarms.onAlarm.addListener((alarm) => {
     console.log("Your time is up! We'll remind you every 5 extra minutes you spend on here.");
