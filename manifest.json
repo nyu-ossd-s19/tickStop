@@ -11,7 +11,8 @@
       "activeTab",
       "webRequest",
       "<all_urls>",
-      "alarms"
+      "alarms",
+      "notifications"
     ],
 
   	"background": {
