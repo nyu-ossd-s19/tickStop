@@ -13,6 +13,8 @@ browser.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   console.log("TAB URL: " + tab.url);
   if(tab.url.includes(MATCH_URL)){
     startTimer(tab);
+  } else {
+    browser.alarms.clearAll();
   }
 });
 
