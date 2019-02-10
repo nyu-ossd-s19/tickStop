@@ -3,19 +3,18 @@
     "manifest_version": 2,
     "name": "tickStop",
     "version": "1.0",
-  
+
     "description": "Keeps track of time spent on social media platforms in an active session and alerts if it exceeds the user-provided time limit.",
     "homepage_url": "https://github.com/nyu-ossd-s19/tickStop",
-  
+
     "permissions": [
       "activeTab",
       "webRequest",
       "<all_urls>",
       "alarms"
     ],
-  
+
   	"background": {
   		"scripts": ["background.js"]
   	}
-  }
-  
+}
