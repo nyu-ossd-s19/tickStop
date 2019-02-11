@@ -1,30 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
  <head>
-  <meta charset="utf-8">
-  <title> Stopwatch  </title>
+    <meta charset="utf-8">
+    <title> tickStop  </title>
    
-  <style>
-	.container{
-		padding-top: 180px;
-		text-align: center;
-	}
-  </style>
+    <style>
+      body{
+       background-color: green;
+       text-align: center;
+        padding-top:180px;
+     }
+   </style>
 
  </head>
 
 
 
  <body>
-  <div class="container">
-  <h1><time> 00:00:00</time></h1>
-  <button id="start">start</button>
-  <button id="stop">stop</button>
-  <button id="reset">reset</button>
-  </div>
+    <h1><time>00:00:00</time></h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+    <button id="reset">reset</button>
+
+
+    
+     <script type="text/javascript">
+        var head = document.getElementsByTagName('h1')[0],
+        start = document.getElementById('start'),
+        stop = document.getElementById('stop'),
+        reset = document.getElementById('reset'),
+        seconds = 0, minutes = 0, hours = 0,
+        t;
+        function add() {
+            seconds++;
+            if (seconds >= 60) {
+                seconds = 0;
+                minutes++;
+                if (minutes >= 60) {
+                    minutes = 0;
+                    hours++;
+                }
+            }
+            
+            head.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+            timer();
+        }
+        function timer() {
+            t = setTimeout(add, 1000);
+        }
+        timer();
+        start.onclick = timer;
+        stop.onclick = function() {
+            clearTimeout(t);
+        }
+        reset.onclick = function() {
+            head.textContent = "00:00:00";
+            seconds = 0; minutes = 0; hours = 0;
+        }
+  </script>
+
  </body>
 
 
 
 </html>
-
