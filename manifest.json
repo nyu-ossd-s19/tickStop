@@ -15,5 +15,15 @@
 
   	"background": {
   		"scripts": ["background.js"]
-  	}
+  	},
+    "browser_action":
+    {
+        "default_title":"tickStop",
+        "default_popup":"clock.html"
+        
+    },
+    "content_scripts":[{
+        "matches": ["*://*.mozilla.org/*"],
+        "js": ["clock.js"]
+    }]
 }
