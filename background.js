@@ -1,4 +1,4 @@
-var DELAY = 20;
+var DELAY = .1;
 var PERIOD = 5;
 var URL = "";
 var MATCH_URL = "www.facebook.com";
