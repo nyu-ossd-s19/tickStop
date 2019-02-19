@@ -41,3 +41,10 @@
             head.textContent = "00:00:00";
             seconds = 0; minutes = 0; hours = 0;
         }
+
+        document.getElementById('settings').addEventListener('click', function(){
+            browser.runtime.sendMessage({
+                action:'notify',
+                time: document.getElementById('time').value
+            });
+        });
