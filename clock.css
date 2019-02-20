@@ -1,6 +1,6 @@
 :root {
-  	--primary-background: linear-gradient(#F3F1F1, #EDEDED);
-  	--hovered-background: linear-gradient(#DBDBDB, #D8D8D8);
+  	--primary-background: linear-gradient(#F3F3F3, #EDEDED);
+  	--hovered-background: linear-gradient(#E1E1E1, #DBDBDB);
     --active-background: #8A8A8A;
   	--primary-border: #D8D8D8;
 }
@@ -44,24 +44,10 @@ button:active {
     color: #ffffff;
 }
 
-button-paused {
+button-status {
     height: 12px;
     width: 80px;
     color: #ffffff;
-    background: #FF7C7C;
-    border-radius: 4px;
-    font-size: 10px;
-    padding-left: 8px;
-    padding-right: 8px;
-    padding-top: 2px;
-    padding-bottom: 2px;
-}
-
-button-played {
-    height: 12px;
-    width: 80px;
-    color: #F9F9F9;
-    background: #F9F9F9;
     border-radius: 4px;
     font-size: 10px;
     padding-left: 8px;
