@@ -14,6 +14,14 @@ An open-source Mozilla Firefox extension by Team 8 to keep track of time spent o
 5. Select `manifest.json`
 6. You will now be able to enjoy tickStop in your browser!
 
+
+## Contributing
+
+Please ensure that you are contributing code that adheres to the existing style to maintain consistency within the project.
+
+For more information, see `CONTRIBUTING.md`
+
+
 ## Support
 
 Please report any bugs or issues on Github at <https://github.com/nyu-ossd-s19/tickStop/issues>.
