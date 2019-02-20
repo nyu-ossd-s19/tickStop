@@ -36,6 +36,6 @@ pause.onclick = function() {
 reset.onclick = function() {
     head.textContent = "00:00:00";
     seconds = 0; minutes = 0; hours = 0;
-    document.getElementById("status").style.cssText = 'background: #F9F9F9;';
+    document.getElementById("status").style.cssText = 'background: #D1D1D1;';
     document.getElementById("status").innerHTML = "RESET";
 }
