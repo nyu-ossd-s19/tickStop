@@ -7,7 +7,7 @@ An open-source Mozilla Firefox extension by Team 8 to keep track of time spent o
 
 ## Installation
 
-1. Clone the repository
+1. Clone the repository using `git clone GITHUB_REPOSITORY_URL`
 2. Open `about:debugging` in a new Firefox tab
 3. Click `Load temporary Add-on...` on the top right of the page
 4. Navigate to the folder that contains the clone of this repository
