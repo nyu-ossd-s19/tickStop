@@ -1,34 +1,18 @@
 <!DOCTYPE html>
+
 <html lang="ja">
- <head>
-    <meta charset="utf-8">
-    <title> tickStop  </title>
-   
-    <style>
-      body{
-       background-color: green;
-       text-align: center;
-        padding-top:180px;
-     }
-   </style>
+    <head>
+        <meta charset="utf-8">
+        <title> tickStop </title>
+        <link rel="stylesheet" href="clock.css">
+    </head>
 
- </head>
-
-
-
- <body>
-    <h1><time>00:00:00</time></h1>
-    <button id="start">start</button>
-    <button id="stop">stop</button>
-    <button id="reset">reset</button>
-
-
-    
-  <script src="clock.js"></script>
-     
-
- </body>
-
-
-
+    <body>
+        <button-played id="status"></button-played>
+        <h1><time>00:00:00</time></h1>
+        <button id="start">start</button>
+        <button id="pause">pause</button>
+        <button id="reset">reset</button>
+        <script src="clock.js"></script>
+    </body>
 </html>
